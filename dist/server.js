@@ -59,7 +59,7 @@ class Server {
 
     allowCors() {
         this.app.use(cors({
-            origin: "https://miliwani-food-app.netlify.app/login", // Allow only your frontend domain
+            origin: "https://miliwani-food-app.netlify.app/", // Allow only your frontend domain
             methods: "GET,POST,PUT,DELETE",
             allowedHeaders: "Content-Type,Authorization"
         }));
