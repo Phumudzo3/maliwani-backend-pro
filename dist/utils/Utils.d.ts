@@ -1,4 +1,4 @@
-import * as Multer from "multer";
+import Multer from "multer";
 export declare class Utils {
     MAX_TOKEN_TIME: number;
     multer: Multer.Multer;

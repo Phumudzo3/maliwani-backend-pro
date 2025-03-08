@@ -1,6 +1,6 @@
-import * as express from "express";
+import express from "express";
 import * as mongoose from "mongoose";
-import * as cors from "cors";
+import cors from "cors";
 import { getEnvironmentVariables } from "./enviroments/environment";
 import UserRouter from "./router/UserRouter";
 import * as bodyParser from "body-parser";

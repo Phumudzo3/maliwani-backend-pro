@@ -8,11 +8,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.OrderController = void 0;
-const Order_1 = require("../models/Order");
-const Product_1 = require("../models/Product");
-const Cart_1 = require("../models/Cart");
+const Order_1 = __importDefault(require("../models/Order"));
+const Product_1 = __importDefault(require("../models/Product"));
+const Cart_1 = __importDefault(require("../models/Cart"));
 const Stripe_1 = require("../utils/Stripe");
 class OrderController {
     static placeOrder(req, res, next) {

@@ -8,14 +8,17 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.userController = void 0;
 const Utils_1 = require("../utils/Utils");
 // import { NodeMailer } from "../utils/NodeMailer";
 const Jwt_1 = require("../utils/Jwt");
-const User_1 = require("../models/User");
+const User_1 = __importDefault(require("../models/User"));
 const Redis_1 = require("../utils/Redis");
-const moment = require("moment");
+const moment_1 = __importDefault(require("moment"));
 const ExcelJS = require('exceljs');
 class userController {
     static registerUserViaPhone(req, res, next) {
@@ -642,8 +645,8 @@ class userController {
     }
     static exportUsersToExcel(req, res, next) {
         return __awaiter(this, void 0, void 0, function* () {
-            const startDate = moment(new Date()).startOf('month').toDate();
-            const endDate = moment(new Date()).startOf('month').toDate();
+            const startDate = (0, moment_1.default)(new Date()).startOf('month').toDate();
+            const endDate = (0, moment_1.default)(new Date()).startOf('month').toDate();
             try {
                 const users = yield User_1.default.find({
                     // created_at:{

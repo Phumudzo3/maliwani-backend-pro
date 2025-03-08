@@ -1,5 +1,5 @@
 import * as Bcrypt from "bcrypt";
-import * as Multer from "multer";
+import Multer from "multer";
 import * as dotenv from "dotenv";
 const storageOptions = Multer.diskStorage({
   destination: (req, file, cb) => {

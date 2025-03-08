@@ -8,10 +8,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.StoreController = void 0;
-const Store_1 = require("../models/Store");
-const User_1 = require("../models/User");
+const Store_1 = __importDefault(require("../models/Store"));
+const User_1 = __importDefault(require("../models/User"));
 const Utils_1 = require("../utils/Utils");
 class StoreController {
     static addStore(req, res, next) {

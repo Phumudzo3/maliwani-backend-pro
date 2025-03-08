@@ -3,7 +3,8 @@ import { Utils } from "../utils/Utils";
 import { Jwt } from "../utils/Jwt";
 import User from "../models/User";
 import { Redis } from "../utils/Redis";
-import *  as moment from "moment";
+import moment from "moment";
+
 const ExcelJS = require('exceljs');
 
 export class userController {

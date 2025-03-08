@@ -8,9 +8,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CityController = void 0;
-const City_1 = require("../models/City");
+const City_1 = __importDefault(require("../models/City"));
 class CityController {
     static addCity(req, res, next) {
         return __awaiter(this, void 0, void 0, function* () {
