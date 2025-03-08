@@ -59,10 +59,7 @@ class Server {
 
     allowCors() {
         this.app.use(cors({
-            origin: ["https://miliwani-food-app.netlify.app", "http://localhost:3000"], // Allow both frontend & local dev
-            methods: ["GET", "POST", "PUT", "DELETE"],
-            allowedHeaders: ["Content-Type", "Authorization"],
-            credentials: true // Allow cookies & authentication headers
+             origin: "*" 
         }));
     }
 
