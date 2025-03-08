@@ -58,7 +58,11 @@ class Server {
     }
 
     allowCors() {
-        this.app.use(cors());
+        this.app.use(cors({
+            origin: "http://your-frontend-domain.com", // Allow only your frontend domain
+            methods: "GET,POST,PUT,DELETE",
+            allowedHeaders: "Content-Type,Authorization"
+        }));
     }
 
     connectMongoDB() {
