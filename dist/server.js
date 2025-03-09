@@ -50,6 +50,7 @@ class Server {
         this.dotenvConfigs();
         this.connectMongoDB();
         this.allowCors();
+        this.connectRedis();
         this.configureBodyParser();
     }
 
@@ -83,16 +84,16 @@ class Server {
         });
     }
 
-    // connectRedis() {
-    //     return __awaiter(this, void 0, void 0, function* () {
-    //         try {
-    //             Redis_1.Redis.conncectToRedis();
-    //             console.log("Connected to Redis.");
-    //         } catch (error) {
-    //             console.error("Error connecting to Redis:", error.message);
-    //         }
-    //     });
-    // }
+    connectRedis() {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                Redis_1.Redis.conncectToRedis();
+                console.log("Connected to Redis.");
+            } catch (error) {
+                console.error("Error connecting to Redis:", error.message);
+            }
+        });
+    }
 
     setRoutes() {
         this.app.use("/src/uploads", express.static("src/uploads"));
