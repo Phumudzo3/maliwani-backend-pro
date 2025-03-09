@@ -58,8 +58,22 @@ class Server {
     }
 
     allowCors() {
+        const allowedOrigins = [
+            "http://localhost:3000",
+            "https://miliwani-food-app.netlify.app"
+        ];
+    
         this.app.use(cors({
-             origin: "*" 
+            origin: (origin, callback) => {
+                if (!origin || allowedOrigins.includes(origin)) {
+                    callback(null, true);
+                } else {
+                    callback(new Error("Not allowed by CORS"));
+                }
+            },
+            credentials: true, // Allow cookies & Authorization headers
+            methods: "GET,POST,PUT,DELETE,OPTIONS",
+            allowedHeaders: "Content-Type,Authorization"
         }));
     }
 
