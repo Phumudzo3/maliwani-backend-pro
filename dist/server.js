@@ -58,9 +58,10 @@ class Server {
     }
 
     allowCors() {
-        this.app.use(cors({
-             origin: "*" 
-        }));
+        const cors = require("cors");
+
+        app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+        
     }
 
     connectMongoDB() {
