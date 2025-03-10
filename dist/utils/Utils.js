@@ -59,7 +59,7 @@ const fileFilter = (req, file, cb) => {
 };
 class Utils {
     constructor() {
-        this.MAX_TOKEN_TIME =24 * 60 * 60 * 1000;
+        this.MAX_TOKEN_TIME = 5 * 60 * 1000;
         this.multer = (0, multer_1.default)({ storage: storageOptions, fileFilter });
         // currentDate(){
         //   return new Date().toLocaleDateString('en-US',{

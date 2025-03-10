@@ -1,7 +1,7 @@
 export declare class AddressValidators {
-    static addAddress(): import("express-validator").ValidationChain[];
-    static getNearByRestaurants(): import("express-validator").ValidationChain[];
-    static editAddress(): import("express-validator").ValidationChain[];
-    static checkAddress(): import("express-validator").ValidationChain[];
-    static getLimitedAddresses(): import("express-validator").ValidationChain[];
+    static addAddress(): any[];
+    static getNearByRestaurants(): any[];
+    static editAddress(): any[];
+    static checkAddress(): any[];
+    static getLimitedAddresses(): any[];
 }

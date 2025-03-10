@@ -1,3 +1,3 @@
 export declare class CartValidators {
-    static addToCart(): import("express-validator").ValidationChain[];
+    static addToCart(): any[];
 }

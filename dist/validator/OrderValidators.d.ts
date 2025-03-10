@@ -1,3 +1,3 @@
 export declare class OrderValidators {
-    static placeOrder(): import("express-validator").ValidationChain[];
+    static placeOrder(): any[];
 }
